@@ -124,7 +124,7 @@ watch(messages, () => scrollToBottom(), { deep: true })
 
 .ai-container {
   height: 100%; display: flex; flex-direction: column;
-  background: rgba(15, 23, 42, 0.6);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -175,7 +175,7 @@ watch(messages, () => scrollToBottom(), { deep: true })
   padding: 12px 16px; border-radius: 12px;
 }
 .user .msg-content { background: rgba(6,182,212,0.06); border-top-left-radius: 4px; }
-.assistant .msg-content { background: rgba(30,41,59,0.6); border-top-right-radius: 4px; }
+.assistant .msg-content { background: #f0f2f5; border-top-right-radius: 4px; }
 
 :deep(.msg-content pre) {
   background: #0a0e1a; color: #e2e8f0; padding: 12px 16px;
@@ -185,7 +185,7 @@ watch(messages, () => scrollToBottom(), { deep: true })
 :deep(.msg-content code) { background: rgba(148,163,184,0.1); padding: 2px 6px; border-radius: 4px; font-size: 13px; color: #22d3ee; }
 :deep(.msg-content pre code) { background: transparent; padding: 0; color: inherit; }
 
-.typing-dots { display: flex; gap: 5px; padding: 12px 16px; background: rgba(30,41,59,0.6); border-radius: 12px; border-top-right-radius: 4px; width: fit-content; }
+.typing-dots { display: flex; gap: 5px; padding: 12px 16px; background: #f0f2f5; border-radius: 12px; border-top-right-radius: 4px; width: fit-content; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-muted); animation: typing 1.4s infinite ease-in-out; }
 .dot:nth-child(1) { animation-delay: 0s; }
 .dot:nth-child(2) { animation-delay: 0.2s; }
@@ -194,7 +194,7 @@ watch(messages, () => scrollToBottom(), { deep: true })
 
 .ai-input-area { padding: 12px 24px; border-top: 1px solid var(--border-color); flex-shrink: 0; }
 .ai-input { margin-bottom: 8px; }
-:deep(.ai-input .el-textarea__inner) { border-radius: 10px; resize: none; background: rgba(15,23,42,0.6) !important; }
+:deep(.ai-input .el-textarea__inner) { border-radius: 10px; resize: none; background: var(--bg-secondary) !important; }
 .input-footer { display: flex; justify-content: space-between; align-items: center; }
 .input-hint { font-size: 12px; color: var(--text-muted); }
 </style>

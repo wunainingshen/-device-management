@@ -127,49 +127,9 @@ const handleRegister = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-primary);
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(135deg, #f0f2f5 0%, #e8ecf1 100%);
 }
-
-.register-bg {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
-.bg-orb-1 {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.12), transparent);
-  top: -200px;
-  left: -100px;
-  filter: blur(80px);
-  animation: float 20s ease-in-out infinite;
-}
-
-.bg-orb-2 {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(244, 63, 94, 0.08), transparent);
-  bottom: -150px;
-  right: -100px;
-  filter: blur(80px);
-  animation: float 25s ease-in-out infinite reverse;
-}
-
-.bg-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
+.register-bg, .bg-orb-1, .bg-orb-2, .bg-grid { display: none; }
 
 @keyframes float {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
@@ -180,11 +140,10 @@ const handleRegister = async () => {
 .register-card {
   width: 520px;
   padding: 40px;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(24px);
+  background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   position: relative;
   z-index: 1;
   animation: cardEnter 0.6s ease-out;

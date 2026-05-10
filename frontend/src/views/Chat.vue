@@ -286,7 +286,7 @@ onMounted(() => { chatStore.fetchFriends(); chatStore.fetchRequests(); chatStore
 
 .chat-container {
   height: 100%; display: flex;
-  background: rgba(15, 23, 42, 0.6);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -342,7 +342,7 @@ onMounted(() => { chatStore.fetchFriends(); chatStore.fetchRequests(); chatStore
 .chat-header {
   display: flex; justify-content: space-between; align-items: center;
   padding: 14px 24px; border-bottom: 1px solid var(--border-color);
-  background: rgba(15,23,42,0.4);
+  background: var(--bg-secondary);
 }
 .chat-user-info { display: flex; align-items: center; gap: 12px; }
 .chat-user-name { font-size: 15px; font-weight: 600; color: var(--text-primary); }
@@ -351,7 +351,7 @@ onMounted(() => { chatStore.fetchFriends(); chatStore.fetchRequests(); chatStore
 
 .messages-area {
   flex: 1; overflow-y: auto; padding: 20px 24px;
-  background: rgba(10,14,26,0.3);
+  background: var(--bg-tertiary);
 }
 
 .time-divider {
@@ -380,7 +380,7 @@ onMounted(() => { chatStore.fetchFriends(); chatStore.fetchRequests(); chatStore
   color: #fff; border-bottom-right-radius: 4px;
 }
 .message-other .message-bubble {
-  background: rgba(30,41,59,0.8);
+  background: #f0f2f5;
   color: var(--text-primary); border-bottom-left-radius: 4px;
 }
 
@@ -390,10 +390,10 @@ onMounted(() => { chatStore.fetchFriends(); chatStore.fetchRequests(); chatStore
 
 .chat-input-area {
   padding: 12px 24px; border-top: 1px solid var(--border-color);
-  background: rgba(15,23,42,0.4);
+  background: var(--bg-secondary);
 }
 .chat-input { margin-bottom: 8px; }
-:deep(.chat-input .el-textarea__inner) { border-radius: 10px; resize: none; background: rgba(15,23,42,0.6) !important; }
+:deep(.chat-input .el-textarea__inner) { border-radius: 10px; resize: none; background: var(--bg-secondary) !important; }
 
 .input-footer { display: flex; justify-content: space-between; align-items: center; }
 .input-hint { font-size: 12px; color: var(--text-muted); }

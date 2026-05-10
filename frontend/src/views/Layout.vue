@@ -166,31 +166,18 @@ onUnmounted(() => {
   height: 100vh;
   overflow: hidden;
   background: var(--bg-primary);
-  position: relative;
 }
 
 .layout-glow {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(ellipse at 20% 50%, rgba(6, 182, 212, 0.03) 0%, transparent 50%),
-              radial-gradient(ellipse at 80% 20%, rgba(99, 102, 241, 0.02) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .main-container {
   height: 100%;
-  position: relative;
-  z-index: 1;
 }
 
-/* ===== 侧边栏 ===== */
 .sidebar {
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(20px);
+  background: var(--bg-secondary);
   border-right: 1px solid var(--border-color);
   transition: width var(--transition-normal);
   overflow: hidden;
@@ -272,13 +259,13 @@ onUnmounted(() => {
 
 :deep(.el-menu-item:hover),
 :deep(.el-sub-menu__title:hover) {
-  background: rgba(255, 255, 255, 0.05) !important;
+  background: #f5f7fa !important;
   color: var(--text-primary) !important;
 }
 
 :deep(.el-menu-item.is-active) {
-  background: rgba(6, 182, 212, 0.12) !important;
-  color: var(--primary-light) !important;
+  background: rgba(6, 182, 212, 0.08) !important;
+  color: var(--primary-color) !important;
 }
 
 :deep(.el-menu-item.is-active) .el-icon {
@@ -295,8 +282,7 @@ onUnmounted(() => {
 
 /* ===== 顶栏 ===== */
 .header {
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(20px);
+  background: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
   display: flex;
   align-items: center;

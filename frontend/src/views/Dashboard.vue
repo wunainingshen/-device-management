@@ -172,10 +172,11 @@ onMounted(async () => {
 
 .welcome-card {
   position: relative; overflow: hidden;
-  background: rgba(15,23,42,0.6); border: 1px solid var(--border-color); border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, #e8f4f8 0%, #f0f2f5 100%);
+  border: 1px solid var(--border-color); border-radius: var(--radius-xl);
   padding: 32px 40px; margin-bottom: 24px;
 }
-.welcome-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 0% 100%, rgba(6,182,212,0.12) 0%, transparent 50%), radial-gradient(ellipse at 100% 0%, rgba(99,102,241,0.08) 0%, transparent 50%); pointer-events: none; }
+.welcome-bg { display: none; }
 .welcome-content { display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
 .welcome-greeting { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--primary-light); font-weight: 500; margin-bottom: 8px; }
 .greeting-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--primary-color); animation: pulse 2s ease-in-out infinite; }
@@ -189,10 +190,10 @@ onMounted(async () => {
 
 .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; margin-bottom: 24px; }
 .stat-card {
-  position: relative; background: rgba(15,23,42,0.6); border: 1px solid var(--border-color); border-radius: var(--radius-lg);
+  position: relative; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-lg);
   padding: 20px 24px; overflow: hidden; cursor: default; transition: all var(--transition-normal);
 }
-.stat-card:hover { border-color: rgba(148,163,184,0.2); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+.stat-card:hover { border-color: rgba(148,163,184,0.4); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
 .stat-bg { position: absolute; inset: 0; pointer-events: none; }
 .stat-content { display: flex; justify-content: space-between; align-items: flex-start; position: relative; z-index: 1; }
 .stat-label { font-size: 13px; color: var(--text-muted); font-weight: 500; margin-bottom: 8px; }

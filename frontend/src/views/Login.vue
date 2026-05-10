@@ -130,61 +130,17 @@ const handleAdminLogin = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-primary);
+  background: linear-gradient(135deg, #f0f2f5 0%, #e8ecf1 100%);
   position: relative;
   overflow: hidden;
 }
 
-/* ===== 背景效果 ===== */
-.login-bg {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
-.bg-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.4;
-}
-
-.bg-orb-1 {
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.15), transparent);
-  top: -200px;
-  right: -100px;
-  animation: float 20s ease-in-out infinite;
-}
-
-.bg-orb-2 {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent);
-  bottom: -150px;
-  left: -100px;
-  animation: float 25s ease-in-out infinite reverse;
-}
-
-.bg-orb-3 {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.08), transparent);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: float 15s ease-in-out infinite;
-}
-
-.bg-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
+.login-bg { display: none; }
+.bg-orb { display: none; }
+.bg-orb-1 { display: none; }
+.bg-orb-2 { display: none; }
+.bg-orb-3 { display: none; }
+.bg-grid { display: none; }
 
 @keyframes float {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
@@ -196,11 +152,10 @@ const handleAdminLogin = async () => {
 .login-card {
   width: 420px;
   padding: 40px;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(24px);
+  background: #ffffff;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   position: relative;
   z-index: 1;
   animation: cardEnter 0.6s ease-out;
